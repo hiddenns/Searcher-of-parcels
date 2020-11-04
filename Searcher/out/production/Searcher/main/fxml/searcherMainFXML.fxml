@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" maxHeight="386.0" maxWidth="374.0" prefHeight="355.0" prefWidth="324.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.classes.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="356.0" prefWidth="318.0" style="-fx-background-color: #fafafa;">
+            <children>
+                <AnchorPane layoutY="-8.0" prefHeight="192.0" prefWidth="324.0" style="-fx-background-color: #2E3348;">
+                    <children>
+                        <TextField fx:id="EnterTTN" alignment="TOP_LEFT" focusTraversable="false" layoutX="56.0" layoutY="88.0" prefHeight="26.0" prefWidth="213.0" promptText="Номер ттн" style="-fx-border-radius: 5; -fx-background-color: #fafafa;">
+                            <font>
+                                <Font name="Cambria" size="14.0" />
+                            </font>
+                        </TextField>
+                        <Button fx:id="ButtonMain" layoutX="202.0" layoutY="146.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="103.0" style="-fx-border-radius: 5; -fx-background-color: #f39c63;" text="Отследить" textFill="#fafafa">
+                            <font>
+                                <Font name="Constantia" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Label fx:id="LabelTrack" layoutX="27.0" layoutY="27.0" prefHeight="62.0" prefWidth="271.0" style="-fx-border-radius: 5; -fx-padding: 5;" text="Отследить посылку" textFill="#fafafa">
+                            <font>
+                                <Font name="Constantia Bold" size="26.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="TimeNow" layoutX="9.0" layoutY="11.0" prefHeight="16.0" prefWidth="92.0" text="Time" textFill="#a4a4a4">
+                            <font>
+                                <Font name="Cambria" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="DataNow" layoutX="224.0" layoutY="12.0" prefHeight="18.0" prefWidth="92.0" text="Data" textFill="#a4a4a4">
+                            <font>
+                                <Font name="Cambria" size="14.0" />
+                            </font>
+                        </Label>
+                        <ChoiceBox fx:id="choiceDelivery" cache="true" layoutX="19.0" layoutY="148.0" prefHeight="32.0" prefWidth="125.0" style="-fx-background-color: #f39c63; -fx-background-radius: 5;">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ChoiceBox>
+                        <Label layoutX="37.0" layoutY="130.0" prefHeight="16.0" prefWidth="103.0" text="Выбор почты" textFill="WHITE">
+                            <font>
+                                <Font name="Constantia Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children></AnchorPane>
+                <Label fx:id="labelStat" layoutX="9.0" layoutY="197.0" opacity="0.0" prefHeight="35.0" prefWidth="92.0" text="Статус:" textFill="#515151" AnchorPane.topAnchor="197.0">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelRout" layoutX="10.0" layoutY="233.0" opacity="0.0" prefHeight="35.0" prefWidth="92.0" text="Маршрут:" textFill="#515151" AnchorPane.topAnchor="233.0">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelData" layoutX="9.0" layoutY="263.0" opacity="0.0" prefHeight="35.0" prefWidth="62.0" text="Дата:" textFill="#515151" AnchorPane.topAnchor="263.0">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelAdress" layoutX="9.0" layoutY="293.0" opacity="0.0" prefHeight="35.0" prefWidth="62.0" text="Адрес:" textFill="#515151" AnchorPane.topAnchor="293.0">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="resultAdress" alignment="TOP_LEFT" layoutX="59.0" layoutY="302.0" prefHeight="35.0" prefWidth="256.0" textFill="#515151" wrapText="true">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="resultData" layoutX="55.0" layoutY="264.0" prefHeight="35.0" prefWidth="256.0" textFill="#515151">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="resultRout" layoutX="89.0" layoutY="234.0" prefHeight="35.0" prefWidth="233.0" textFill="#515151">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="resultStat" alignment="TOP_LEFT" layoutX="66.0" layoutY="205.0" prefHeight="35.0" prefWidth="249.0" textFill="#515151" wrapText="true">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelStatUkr" layoutX="15.0" layoutY="190.0" opacity="0.0" prefHeight="35.0" prefWidth="62.0" text="Статус:" textFill="#515151">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelSenderUkr" layoutX="14.0" layoutY="294.0" opacity="0.0" prefHeight="35.0" prefWidth="103.0" text="Отправитель:" textFill="#515151">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelDataNowUkr" layoutX="14.0" layoutY="219.0" opacity="0.0" prefHeight="35.0" prefWidth="132.0" text="Дата оновлення:" textFill="#515151">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="resultStatusUkr" alignment="TOP_LEFT" layoutX="69.0" layoutY="199.0" prefHeight="35.0" prefWidth="249.0" textFill="#515151" wrapText="true">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelRouteNowUkr" layoutX="14.0" layoutY="249.0" opacity="0.0" prefHeight="47.0" prefWidth="132.0" text="Промежуточный маршрут:" textFill="#515151" wrapText="true">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="resultSenderUkr" alignment="TOP_LEFT" layoutX="117.0" layoutY="303.0" prefHeight="25.0" prefWidth="188.0" textFill="#515151" wrapText="true">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="resultDataNowUkr" alignment="TOP_LEFT" layoutX="139.0" layoutY="228.0" prefHeight="35.0" prefWidth="175.0" textFill="#515151" wrapText="true">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="resultRouteNowUkr" alignment="TOP_LEFT" layoutX="145.0" layoutY="256.0" prefHeight="47.0" prefWidth="175.0" textFill="#515151" wrapText="true">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelDayInTheRoad" layoutX="13.0" layoutY="319.0" opacity="0.0" prefHeight="35.0" prefWidth="125.0" text="Дней в дороге:" textFill="#515151">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="resultDayInTHeRoadUkr" alignment="TOP_LEFT" layoutX="121.0" layoutY="329.0" prefHeight="19.0" prefWidth="111.0" textFill="#515151" wrapText="true">
+                    <font>
+                        <Font name="Georgia" size="15.0" />
+                    </font>
+                </Label>
+                <ProgressBar fx:id="progressBarLoad" cache="true" layoutX="-4.0" layoutY="180.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.0" prefHeight="18.0" prefWidth="328.0" progress="0.0" style="-fx-border-color: #2E3348;" />
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>
