@@ -83,7 +83,7 @@
                         <Font name="Georgia" size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="resultAdress" alignment="TOP_LEFT" layoutX="59.0" layoutY="302.0" prefHeight="35.0" prefWidth="256.0" textFill="#515151" wrapText="true">
+                <Label fx:id="resultAdress" alignment="TOP_LEFT" layoutX="59.0" layoutY="302.0" prefHeight="47.0" prefWidth="256.0" textFill="#515151" wrapText="true">
                     <font>
                         <Font name="Georgia" size="15.0" />
                     </font>
