@@ -40,12 +40,6 @@ public class Controller {
     private Button ButtonMain;
 
     @FXML
-    private Label TimeNow;
-
-    @FXML
-    private Label DataNow;
-
-    @FXML
     private Label LabelTrack;
 
     @FXML
@@ -92,6 +86,12 @@ public class Controller {
 
     @FXML
     public ProgressBar progressBarLoad;
+
+    @FXML
+    public Label TimeNow;
+
+    @FXML
+    public Label DataNow;
 
     @FXML
     void initialize() {
@@ -141,14 +141,14 @@ public class Controller {
 
     private void setDataAndTime() {
 
+        Date date = new Date();
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("E dd.MM.yyyy");
         SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
 
-        Date currentDate = new Date();
-
-        DataNow.setText(dateFormat.format(currentDate));
-        TimeNow.setText(timeFormat.format(currentDate));
-    }
+        TimeNow.setText(timeFormat.format(date));
+        DataNow.setText(dateFormat.format(date));
+        }
 
     private void loadDataToCheckBox(){ // Загрузка данных в Check box
         obsList.removeAll(obsList);
